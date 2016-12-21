@@ -43,10 +43,10 @@ class StatController extends \yii\web\Controller
         $query=PatientInfo::find();
         $count=$query->count();
         $monthQuery=clone $query;
-        $query->where(["create_at"=>$date]);
+        $query->where(["date"=>$date]);
         $todayCount=$query->count();
 
-        $monthQuery->where(["and","create_at>=:monthDate","create_at<=:date"],[":date"=>$date,":monthDate"=>$monthDate]);
+        $monthQuery->where(["and","date>=:monthDate","date<=:date"],[":date"=>$date,":monthDate"=>$monthDate]);
         $monthCount=$monthQuery->count();
 
         $counts=array("all"=>$count,"today"=>$todayCount,"month"=>$monthCount);

@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\BaseInfo;
+use frontend\models\ImpactData;
 use frontend\models\PatientInfo;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -14,7 +14,7 @@ use common\models\User;
 /**
  * Controller implements the CRUD actions for User model.
  */
-class BaseInfoController extends Controller
+class ImpactDataController extends Controller
 {
 
     public function behaviors()
@@ -45,10 +45,10 @@ class BaseInfoController extends Controller
     public function actionIndex($id)
     {
         $patient = $this->findPatientModel($id);
-        $baseInfo = $this->findModel($id);
+        $impactData = $this->findModel($id);
         return $this->render("index",[
             'patient' => $patient,
-            'baseInfo' => json_decode($baseInfo->info)
+            'impactData' => json_decode($impactData->info)
         ]);
     }
 
@@ -57,8 +57,9 @@ class BaseInfoController extends Controller
         $model=$this->findModel($params["patientId"]);
         $col=$params["col"];
         $type=$params["type"];
+
         if(!$model){
-            $model=new BaseInfo();
+            $model=new ImpactData();
             if($type){
                 $info=array($type=>$params[$type]);
             }else{
@@ -105,7 +106,7 @@ class BaseInfoController extends Controller
 
     protected function findModel($patientId)
     {
-        if (($model = BaseInfo::findOne(['patient_id' => $patientId])) !== null) {
+        if (($model = ImpactData::findOne(['patient_id' => $patientId])) !== null) {
             return $model;
         } else {
             return false;

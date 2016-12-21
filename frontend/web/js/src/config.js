@@ -11,11 +11,8 @@ var config={
         patientDelete:"patient/delete/:id",
         uploadFile:"upload",
         patientGetAll:"patient/list",
-        medicalInfoUpdate:"medical/info-update",
-        diagnoseInfoUpdate:"diagnose-info/info-update",
-        diagnoseProcessInfoUpdate:"diagnose-process/info-update",
-        returnInfoUpdate:"return-info/info-update",
-        returnInfoRecordSubmit:"return-info/record-submit",
+        baseInfoUpdate:"base-info/info-update",
+        impactDataUpdate:"impact-data/info-update",
         statGetSexData:"stat/get-sex-data",
         statGetAgeData:"stat/get-age-data"
     },
