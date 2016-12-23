@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "patient_info".
  *
  * @property string $id
+ * @property string $disease_type
  * @property string $doctor
  * @property string $date
  * @property string $disease_date
@@ -45,9 +46,9 @@ class PatientInfo extends \yii\db\ActiveRecord
             [['id'], 'required'],
             [['date', 'disease_date'], 'safe'],
             [['age'], 'integer'],
-            [['id', 'doctor', 'AD', 'address', 'fullname', 'tel'], 'string', 'max' => 32],
+            [['id', 'doctor', 'AD', 'address', 'fullname', 'tel', 'disease_type'], 'string', 'max' => 32],
             [['sex'], 'string', 'max' => 2],
-            [['waist', 'hip', 'BMI','height', 'weight'], 'string', 'max' => 8]
+            [['waist', 'hip', 'BMI', 'height', 'weight'], 'string', 'max' => 8]
         ];
     }
 
@@ -58,6 +59,7 @@ class PatientInfo extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'disease_type' => 'Disease Type',
             'doctor' => 'Doctor',
             'date' => 'Date',
             'disease_date' => 'Disease Date',
@@ -71,7 +73,7 @@ class PatientInfo extends \yii\db\ActiveRecord
             'weight' => 'Weight',
             'waist' => 'Waist',
             'hip' => 'Hip',
-            'BMI' => 'Bmi',
+            'BMI' => 'Bmi'
         ];
     }
 

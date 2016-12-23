@@ -8,6 +8,18 @@ $this->title = $model->fullname.'的信息';
             <p class="col-md-8"><?= $model->id;?></p>
         </div>
         <div class="row">
+            <label class="col-md-2 text-right">姓名</label>
+            <div class="col-md-8"><?= $model->fullname;?></div>
+        </div>
+        <div class="row">
+            <label class="col-md-2 text-right">病种</label>
+            <p class="col-md-8"><?= $model->disease_type;?></p>
+        </div>
+        <div class="row">
+            <label class="col-md-2 text-right">医生</label>
+            <p class="col-md-8"><?= $model->doctor;?></p>
+        </div>
+        <div class="row">
             <label class="col-md-2 text-right">住院号</label>
             <p class="col-md-8"><?= $model->AD;?></p>
         </div>
@@ -19,10 +31,6 @@ $this->title = $model->fullname.'的信息';
         <div class="row">
             <label class="col-md-2 text-right">建档日期</label>
             <div class="col-md-8"><?= $model->date;?></div>
-        </div>
-        <div class="row">
-            <label class="col-md-2 text-right">姓名</label>
-            <div class="col-md-8"><?= $model->fullname;?></div>
         </div>
         <div class="row">
             <label class="col-md-2 text-right">性别</label>

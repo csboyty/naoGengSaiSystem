@@ -46,7 +46,7 @@ class ImpactDataController extends Controller
     {
         $patient = $this->findPatientModel($id);
         $impactData = $this->findModel($id);
-        return $this->render("index",[
+        return $this->render("ngs-index",[
             'patient' => $patient,
             'impactData' => json_decode($impactData->info)
         ]);

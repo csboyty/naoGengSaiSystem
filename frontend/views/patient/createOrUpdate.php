@@ -17,6 +17,28 @@ $this->title = '新建/修改病患';
             </div>
         </div>
         <div class="form-group">
+            <label for="name" class="control-label col-md-2">病种*</label>
+            <div class="col-md-8">
+                <select class="form-control" name="disease_type">
+                    <?php
+                    $diseaseTypeArray=array("脑出血","脑梗塞","蛛网膜下腔出血");
+                    $diseaseType=$model->disease_type;
+                    foreach($diseaseTypeArray as $dt){
+                        $dtOptionSel="";
+                        if($diseaseType==$dt){
+                            $dtOptionSel=" selected ";
+                        }
+                        ?>
+
+                        <option <?= $dtOptionSel; ?> value="<?= $dt; ?>"><?= $dt; ?></option>
+
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="name" class="control-label col-md-2">姓名*</label>
             <div class="col-md-8">
                 <input type="text" class="form-control" name="fullname" value="<?= $model->fullname; ?>">

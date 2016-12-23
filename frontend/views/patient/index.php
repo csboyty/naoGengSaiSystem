@@ -18,12 +18,14 @@ $this->title = '病患管理';
     <tr>
         <th>编号</th>
         <th>姓名</th>
+        <th>病种</th>
         <th>操作</th>
     </tr>
     </thead>
     <tbody>
         <!--<tr>
             <td><a href="patient/detail">00001</a></td>
+            <td>小李</td>
             <td>小李</td>
             <td><a href="patient/detail">详情</a></td>
         </tr>-->

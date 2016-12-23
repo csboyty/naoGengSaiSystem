@@ -60,4 +60,16 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $("#saveNingXueGongNeng").click(function () {
+        var info=functions.getInfo("ningXueGongNeng");
+
+        functions.saveInfo(config.ajaxUrls.baseInfoUpdate, {
+            patientId: patientId,
+            type:"ningXueGongNeng",
+            col:"info",
+            ningXueGongNeng: JSON.stringify(info)
+        });
+        return false;
+    });
 });

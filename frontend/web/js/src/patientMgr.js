@@ -23,6 +23,7 @@ var userMgr=(function(config,functions){
             "aoColumns": [
                 { "mDataProp": "id"},
                 { "mDataProp": "fullname"},
+                { "mDataProp": "disease_type"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="patient/detail/'+oObj.aData.id+'">详情</a>&nbsp;&nbsp;&nbsp;'+

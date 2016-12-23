@@ -46,7 +46,7 @@ class BaseInfoController extends Controller
     {
         $patient = $this->findPatientModel($id);
         $baseInfo = $this->findModel($id);
-        return $this->render("index",[
+        return $this->render("ngs-index",[
             'patient' => $patient,
             'baseInfo' => json_decode($baseInfo->info)
         ]);

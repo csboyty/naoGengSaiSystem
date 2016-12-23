@@ -132,7 +132,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse2" data-parent="#accordion"
                    aria-expanded="true" aria-controls="collapse2">
-                    动脉彩超
+                    颈动脉彩超
                 </a>
             </h4>
         </div>
