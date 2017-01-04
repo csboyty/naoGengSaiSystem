@@ -32,6 +32,7 @@ $(document).ready(function(){
                 subtext: '纯属虚构',
                 x:'center'
             },
+            color: ['#66a4f9', '#eb6100', '#EC577B', '#32d6c5', '#4ac246'],
             tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -80,6 +81,7 @@ $(document).ready(function(){
                 subtext: '纯属虚构',
                 x:'center'
             },
+            color: ['#66a4f9', '#eb6100', '#EC577B', '#32d6c5', '#4ac246'],
             tooltip : {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"

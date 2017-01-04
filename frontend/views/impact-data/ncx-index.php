@@ -122,7 +122,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
                 </tbody>
             </table>
             <br>
-            <button class="btn btn-success col-md-2 col-md-offset-2" id="saveTCD">保存</button>
+            <button class="btn btn-primary col-md-2 col-md-offset-2" id="saveTCD">保存</button>
         </div>
     </div>
 </div>
@@ -198,7 +198,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveCaiChao" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveCaiChao" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -295,7 +295,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveMRA" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveMRA" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -361,7 +361,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveCT" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveCT" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -486,7 +486,7 @@ $other = isset($impactData->other) ? json_decode($impactData->other) : null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveOther" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveOther" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>

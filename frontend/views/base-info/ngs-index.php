@@ -308,7 +308,7 @@ $xueZhi = isset($baseInfo->xueZhi)?json_decode($baseInfo->xueZhi):null;
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-2">
-                    <button type="submit" id="saveNormal" class="btn btn-success form-control">保存</button>
+                    <button type="submit" id="saveNormal" class="btn btn-primary form-control">保存</button>
                 </div>
             </div>
             </form>
@@ -368,7 +368,7 @@ $xueZhi = isset($baseInfo->xueZhi)?json_decode($baseInfo->xueZhi):null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveXueChangGui" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveXueChangGui" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -419,7 +419,7 @@ $xueZhi = isset($baseInfo->xueZhi)?json_decode($baseInfo->xueZhi):null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveGanGongNeng" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveGanGongNeng" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -469,7 +469,7 @@ $xueZhi = isset($baseInfo->xueZhi)?json_decode($baseInfo->xueZhi):null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveShenGongNeng" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveShenGongNeng" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>
@@ -563,7 +563,7 @@ $xueZhi = isset($baseInfo->xueZhi)?json_decode($baseInfo->xueZhi):null;
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-2">
-                        <button type="submit" id="saveXueZhi" class="btn btn-success form-control">保存</button>
+                        <button type="submit" id="saveXueZhi" class="btn btn-primary form-control">保存</button>
                     </div>
                 </div>
             </form>

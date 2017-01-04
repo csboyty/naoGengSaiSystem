@@ -70,6 +70,6 @@ $this->title = $model->fullname.'的信息';
         </div>
         <br>
         <div class="row">
-            <a class="col-md-offset-2 btn btn-success" href="base-info/<?= $model->id; ?>">基本情况</a>
+            <a class="col-md-offset-2 btn btn-primary" href="base-info/<?= $model->id; ?>">基本情况</a>
             <a class="col-xs-offset-1 btn btn-primary" href="impact-data/<?= $model->id; ?>">影像资料</a>
         </div>

@@ -25,7 +25,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="header">
-    <h1 class="logo">神经系统发作性疾病临床资源数据库</h1>
+    <h1 class="logo text-primary">湘雅数据库</h1>
     <nav class="topNav">
         <ul>
             <li><a href="account/edit-pwd" class="editpwd">修改密码</a></li>
@@ -35,13 +35,15 @@ AppAsset::register($this);
 </div>
 
 <div class="left">
+    <br>
+    <br>
     <ul class="menu">
         <li class="item">
-            <span class="glyphicon glyphicon-flag"></span>
+            <span class="glyphicon glyphicon-th-list"></span>
             <a class="link" href="patient/">病患管理</a>
         </li>
         <li class="item">
-            <span class="glyphicon glyphicon-flag"></span>
+            <span class="glyphicon glyphicon-stats"></span>
             <a class="link" href="stat/">数据统计</a>
         </li>
     </ul>
