@@ -60,9 +60,13 @@ class PatientController extends Controller
         $offset=$params["iDisplayStart"];
         $sEcho = $params["sEcho"];
         $filter = $params["filter"];
+        $filterDiseaseType = $params["filterDiseaseType"];
         $query=PatientInfo::find();
         if($filter){
             $query->where(['or', 'id=:filter', 'fullname=:filter'],[":filter"=>$filter]);
+        }
+        if($filterDiseaseType){
+            $query->andWhere(array("disease_type"=>$filterDiseaseType));
         }
         $count=$query->count();
         $aaData=$query

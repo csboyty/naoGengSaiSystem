@@ -37,29 +37,47 @@ class StatController extends \yii\web\Controller
     }
 
     public function actionIndex(){
+        return $this->render("index");
+    }
+
+    public function actionGetCounts(){
+        $filterDiseaseType=isset($_GET["filterDiseaseType"])?$_GET["filterDiseaseType"]:"";
+
         $date=date("Y-m-d");
         $monthDate = date("Y-m-01",strtotime($date));
 
         $query=PatientInfo::find();
+        if($filterDiseaseType){
+            $query->where(["disease_type"=>$filterDiseaseType]);
+        }
         $count=$query->count();
         $monthQuery=clone $query;
-        $query->where(["date"=>$date]);
+        $query->andWhere(["date"=>$date]);
         $todayCount=$query->count();
 
-        $monthQuery->where(["and","date>=:monthDate","date<=:date"],[":date"=>$date,":monthDate"=>$monthDate]);
+        $monthQuery->andWhere(["and","date>=:monthDate","date<=:date"],[":date"=>$date,":monthDate"=>$monthDate]);
         $monthCount=$monthQuery->count();
 
         $counts=array("all"=>$count,"today"=>$todayCount,"month"=>$monthCount);
 
-        return $this->render("index",[
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        return [
+            "success"=>true,
             "counts"=>$counts
-        ]);
+        ];
+
     }
 
     public function actionGetSexData(){
+        $filterDiseaseType=isset($_GET["filterDiseaseType"])?$_GET["filterDiseaseType"]:"";
+
         $query=PatientInfo::find();
+        if($filterDiseaseType){
+            $query->where(["disease_type"=>$filterDiseaseType]);
+        }
         $count=$query->count();
-        $query->where(["sex"=>"男"]);
+        $query->andWhere(["sex"=>"男"]);
         $countNan=$query->count();
 
         $countNv=$count-$countNan;
@@ -76,22 +94,27 @@ class StatController extends \yii\web\Controller
     }
 
     public function actionGetAgeData(){
+        $filterDiseaseType=isset($_GET["filterDiseaseType"])?$_GET["filterDiseaseType"]:"";
+
         $query=PatientInfo::find();
+        if($filterDiseaseType){
+            $query->where(["disease_type"=>$filterDiseaseType]);
+        }
         $b30to40Query=clone $query;
         $b40to50Query=clone $query;
         $b50to60Query=clone $query;
         $b60to70Query=clone $query;
         $b70to80Query=clone $query;
 
-        $b30to40Count=$b30to40Query->where(["and","age>=:low","age<=:up"],
+        $b30to40Count=$b30to40Query->andWhere(["and","age>=:low","age<=:up"],
             [":low"=>30,":up"=>40])->count();
-        $b40to50Count=$b40to50Query->where(["and","age>=:low","age<=:up"],
+        $b40to50Count=$b40to50Query->andWhere(["and","age>=:low","age<=:up"],
             [":low"=>40,":up"=>50])->count();
-        $b50to60Count=$b50to60Query->where(["and","age>=:low","age<=:up"],
+        $b50to60Count=$b50to60Query->andWhere(["and","age>=:low","age<=:up"],
             [":low"=>50,":up"=>60])->count();
-        $b60to70Count=$b60to70Query->where(["and","age>=:low","age<=:up"],
+        $b60to70Count=$b60to70Query->andWhere(["and","age>=:low","age<=:up"],
             [":low"=>60,":up"=>70])->count();
-        $b70to80Count=$b70to80Query->where(["and","age>=:low","age<=:up"],
+        $b70to80Count=$b70to80Query->andWhere(["and","age>=:low","age<=:up"],
             [":low"=>70,":up"=>80])->count();
 
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;

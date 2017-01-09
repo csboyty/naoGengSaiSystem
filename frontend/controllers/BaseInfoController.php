@@ -46,7 +46,19 @@ class BaseInfoController extends Controller
     {
         $patient = $this->findPatientModel($id);
         $baseInfo = $this->findModel($id);
-        return $this->render("ngs-index",[
+        $pageName="ngs-index";
+        switch($patient->disease_type){
+            case "脑梗塞":
+                $pageName="ngs-index";
+                break;
+            case "脑出血":
+                $pageName="ncx-index";
+                break;
+            case "蛛网膜下腔出血":
+                $pageName="sah-index";
+                break;
+        }
+        return $this->render($pageName,[
             'patient' => $patient,
             'baseInfo' => json_decode($baseInfo->info)
         ]);

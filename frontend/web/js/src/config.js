@@ -13,6 +13,7 @@ var config={
         patientGetAll:"patient/list",
         baseInfoUpdate:"base-info/info-update",
         impactDataUpdate:"impact-data/info-update",
+        statGetCounts:"stat/get-counts",
         statGetSexData:"stat/get-sex-data",
         statGetAgeData:"stat/get-age-data"
     },

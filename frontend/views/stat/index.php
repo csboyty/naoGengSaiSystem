@@ -3,14 +3,23 @@
 
 $this->title = '数据统计';
 ?>
+    <div class="tableSearchContainer row">
+        <div class="col-md-3">
+            <select id="filterDiseaseType" class="form-control">
+                <option value="">全部</option>
+                <option value="脑出血">脑出血</option>
+                <option value="脑梗塞">脑梗塞</option>
+                <option value="蛛网膜下腔出血">蛛网膜下腔出血</option>
+            </select>
+        </div>
+    </div>
     <div class="row statCounts">
-        <div class="col-md-4"><b class="count text-own"><?= $counts["today"]; ?></b><label class="label">今天新增</label></div>
-        <div class="col-md-4"><b class="count text-own"><?= $counts["month"]; ?></b><label class="label">本月新增</label></div>
-        <div class="col-md-4"><b class="count text-own"><?= $counts["all"]; ?></b><label class="label">总计病例</label></div>
+        <div class="col-md-4"><b class="count text-primary" id="todayCount"></b><label class="label">今天新增</label></div>
+        <div class="col-md-4"><b class="count text-primary" id="monthCount"></b><label class="label">本月新增</label></div>
+        <div class="col-md-4"><b class="count text-primary" id="allCount"></b><label class="label">总计病例</label></div>
     </div>
 
-
-    <hr>
+    <br><br>
     <div id="sex" style="width: 600px;height:400px;"></div>
     <hr>
     <div id="age" style="width: 600px;height:400px;"></div>

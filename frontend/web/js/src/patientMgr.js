@@ -35,6 +35,9 @@ var userMgr=(function(config,functions){
                 aoData.push({
                     name:"filter",
                     value:$("#filter").val()
+                },{
+                    name:"filterDiseaseType",
+                    value:$("#filterDiseaseType").val()
                 })
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
